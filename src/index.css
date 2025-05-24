@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #2563EB;
+  --primary-light: #60A5FA;
+  --primary-dark: #1D4ED8;
+  --secondary: #7C3AED;
+  --secondary-light: #A78BFA;
+  --secondary-dark: #6D28D9;
+  --accent: #F97316;
+  --accent-light: #FB923C;
+  --accent-dark: #EA580C;
+  --success: #10B981;
+  --warning: #F59E0B;
+  --error: #EF4444;
+  --neutral-50: #FAFAFA;
+  --neutral-100: #F4F4F5;
+  --neutral-200: #E4E4E7;
+  --neutral-300: #D4D4D8;
+  --neutral-400: #A1A1AA;
+  --neutral-500: #71717A;
+  --neutral-600: #52525B;
+  --neutral-700: #3F3F46;
+  --neutral-800: #27272A;
+  --neutral-900: #18181B;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  body {
+    @apply bg-white text-neutral-800;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    line-height: 1.6;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold tracking-tight;
+    line-height: 1.2;
+  }
+}
+
+@layer components {
+  .container {
+    @apply mx-auto max-w-7xl;
+  }
+  
+  .section {
+    @apply py-12 sm:py-16 md:py-20 lg:py-24;
+  }
+  
+  .section-title {
+    @apply text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4 text-center bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary;
+  }
+  
+  .section-subtitle {
+    @apply text-base sm:text-lg md:text-xl text-neutral-600 mb-8 sm:mb-12 text-center max-w-3xl mx-auto;
+  }
+  
+  .btn {
+    @apply inline-flex items-center justify-center px-4 sm:px-6 py-2.5 sm:py-3 rounded-xl font-semibold transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 text-sm sm:text-base;
+  }
+  
+  .btn-primary {
+    @apply bg-gradient-to-r from-primary to-secondary text-white hover:from-primary-dark hover:to-secondary-dark focus:ring-primary shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/30;
+  }
+  
+  .btn-secondary {
+    @apply bg-gradient-to-r from-secondary to-accent text-white hover:from-secondary-dark hover:to-accent-dark focus:ring-secondary shadow-lg shadow-secondary/25 hover:shadow-xl hover:shadow-secondary/30;
+  }
+  
+  .btn-outline {
+    @apply border-2 border-primary bg-white text-primary hover:bg-gradient-to-r hover:from-primary hover:to-secondary hover:text-white focus:ring-primary hover:border-transparent shadow-md hover:shadow-lg;
+  }
+  
+  .fade-in {
+    @apply opacity-0 translate-y-8;
+    transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .fade-in.active {
+    @apply opacity-100 translate-y-0;
+  }
+
+  .glass-card {
+    @apply backdrop-blur-lg bg-white/80 border border-white/20;
+  }
+
+  @keyframes ball-bounce {
+    0% {
+      transform: translate(-100%, 0) scale(1);
+    }
+    25% {
+      transform: translate(-50%, -150%) scale(1.1);
+    }
+    50% {
+      transform: translate(0%, 0) scale(1);
+    }
+    75% {
+      transform: translate(50%, -200%) scale(1.1);
+    }
+    100% {
+      transform: translate(100%, 0) scale(1);
+    }
+  }
+
+  @keyframes path-reveal {
+    0% {
+      transform: scaleX(0);
+      opacity: 0;
+    }
+    20% {
+      opacity: 0.6;
+    }
+    100% {
+      transform: scaleX(1);
+      opacity: 0;
+    }
+  }
+
+  @keyframes impact-mark {
+    0% {
+      transform: scale(0) rotate(var(--rotation));
+      opacity: 0;
+    }
+    50% {
+      transform: scale(1) rotate(var(--rotation));
+      opacity: 0.6;
+    }
+    100% {
+      transform: scale(0) rotate(var(--rotation));
+      opacity: 0;
+    }
+  }
+
+  @keyframes bg-reveal {
+    0% {
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+    60% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0.15;
+      transform: translateX(0);
+    }
+  }
+
+  .animate-ball-bounce {
+    animation: ball-bounce 2s cubic-bezier(0.68, -0.55, 0.265, 1.55) infinite;
+  }
+
+  .animate-path-reveal {
+    animation: path-reveal 2s cubic-bezier(0.68, -0.55, 0.265, 1.55) infinite;
+  }
+
+  .animate-impact-mark {
+    animation: impact-mark 0.5s ease-out infinite;
+    --rotation: 0deg;
+  }
+
+  .animate-bg-reveal {
+    animation: bg-reveal 2s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+  }
+}
+
+/* Mobile-first responsive adjustments */
+@media (max-width: 640px) {
+  .container {
+    @apply px-4;
+  }
+  
+  .btn {
+    @apply text-sm;
+  }
+}
+
+/* Improved touch targets for mobile */
+@media (hover: none) {
+  .btn {
+    @apply min-h-[44px];
+  }
+  
+  a, button {
+    @apply min-h-[44px] min-w-[44px];
+  }
+}
