@@ -13,7 +13,7 @@ const Team = () => {
   
   const teamMembers = [
     {
-      name: 'Abhinav Batchuuuu',
+      name: 'Abhinav Batchu',
       role: 'CoFounder & CEO',
       image: abhinavImage,
       portfolio: 'https://abhinavbatchu.in/',
@@ -26,7 +26,7 @@ const Team = () => {
     {
       name: 'Vamsi Cheruku',
       role: 'CoFounder & CTO', 
-      image: vamsiImage,
+      image: vamsiImage2,
       portfolio: 'https://portfolio-vamsi-cherukus-projects.vercel.app/',
       bio: 'Engineering expert specializing in AI and cloud architecture with a passion for innovation.',
       social: {
