@@ -26,7 +26,7 @@ const Team = () => {
     {
       name: 'Vamsi Cheruku',
       role: 'CoFounder & CTO', 
-      image: vamsiImage2,
+      image: vamsiImage,
       portfolio: 'https://portfolio-vamsi-cherukus-projects.vercel.app/',
       bio: 'Engineering expert specializing in AI and cloud architecture with a passion for innovation.',
       social: {
