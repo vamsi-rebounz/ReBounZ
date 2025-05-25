@@ -13,7 +13,7 @@ const Team = () => {
   
   const teamMembers = [
     {
-      name: 'Abhinav Batchuuuuu',
+      name: 'Abhinav Batchu',
       role: 'CoFounder & CEO',
       image: abhinavImage,
       portfolio: 'https://abhinavbatchu.in/',
