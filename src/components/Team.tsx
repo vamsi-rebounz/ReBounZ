@@ -19,7 +19,7 @@ const Team = () => {
       portfolio: 'https://abhinavbatchu.in/',
       bio: 'Tech visionary with 2+ years of experience in software development and business leadership.',
       social: {
-        email: 'batchu.kedareswaraabhinav@gmail.com',
+        email: 'abhinav.batchu@rebounz.org',
         linkedin: 'https://www.linkedin.com/in/kedareswaraabhinav-batchu/'
       }
     },
@@ -31,7 +31,7 @@ const Team = () => {
       bio: 'Engineering expert specializing in AI and cloud architecture with a passion for innovation.',
       social: {
         linkedin: 'https://www.linkedin.com/in/vamsi-cheruku-05a19a1b4/',
-        email: 'vamsicheruku027@gmail.com'
+        email: 'vamsi.cheruku@rebounz.org'
       }
     },
     {
@@ -41,7 +41,7 @@ const Team = () => {
       bio: 'Strategic product leader with expertise in market analysis and user-centric design thinking.',
       social: {
         linkedin: 'https://www.linkedin.com/in/mohan-jayaram-krishna-bojanapalli-945788203/',
-        email: 'mohanjayaramkrishnabojanapalli@gmail.com'
+        email: 'krishna.bojanapalli@rebounz.org'
       }
     },
     {
@@ -51,7 +51,7 @@ const Team = () => {
       bio: 'Financial strategist with expertise in startup growth and investment management.',
       social: {
         linkedin: 'https://www.linkedin.com/in/asrivallinikhitha/',
-        email: 'srivallinikhitha.a@gmail.com'
+        email: 'nikitha.anantha@rebounz.org'
       }
     },
     {
@@ -61,7 +61,7 @@ const Team = () => {
       bio: 'Operations expert with a proven track record in scaling startups and optimizing business processes.',
       social: {
         linkedin: 'https://www.linkedin.com/in/navya-charitha-bavirisetti-144a85203/',
-        email: 'navyacharitha19@gmail.com'
+        email: 'navyacharitha.bavirisetti@rebounz.org'
       }
     }
   ];
