@@ -1,6 +1,7 @@
 import React from 'react';
 import { Lightbulb, Users, Target, Shield, Award, TrendingUp, Rocket, Sparkles, Zap, Heart, Globe } from 'lucide-react';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
+import SEO from './SEO';
 
 const About = () => {
   useScrollAnimation();
@@ -35,7 +36,14 @@ const About = () => {
   ];
   
   return (
-    <section id="about" className="section bg-white geometric-bg">
+    <>
+      <SEO 
+        title="About ReBounZ | Bridging the Technology Gap"
+        description="We're a team of five visionaries bridging the gap between large tech companies and small enterprises. Learn about our mission to deliver powerful, affordable software solutions."
+        keywords="about ReBounZ, technology gap, small business software, enterprise solutions, affordable software, startup mission"
+        section="About"
+      />
+      <section id="about" className="section bg-white geometric-bg">
       <div className="container">
         <div className="text-center mb-20">
           <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-primary/10 to-secondary/10 px-6 py-3 rounded-full mb-8">
@@ -208,6 +216,7 @@ const About = () => {
         </div>
       </div>
     </section>
+    </>
   );
 };
 

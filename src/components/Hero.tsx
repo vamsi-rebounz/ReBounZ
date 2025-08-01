@@ -1,6 +1,7 @@
 import React from 'react';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 import { ArrowRight, Play, Zap, Sparkles, Rocket, Target } from 'lucide-react';
+import SEO from './SEO';
 
 const Hero = () => {
   useScrollAnimation();
@@ -12,7 +13,14 @@ const Hero = () => {
   ];
   
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center pt-20 geometric-bg overflow-hidden">
+    <>
+      <SEO 
+        title="ReBounZ | Enterprise Software Made Accessible for Small Businesses"
+        description="We bridge the gap between large tech companies and small enterprises by delivering powerful, affordable software solutions that help small businesses compete and grow."
+        keywords="enterprise software, small business software, affordable software solutions, custom software development, web applications, mobile applications"
+        section="Home"
+      />
+      <section id="home" className="relative min-h-screen flex items-center justify-center pt-20 geometric-bg overflow-hidden">
       {/* 3D Background Elements */}
       <div className="absolute inset-0">
         <div className="absolute top-20 right-10 w-96 h-96 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-full blur-3xl floating-3d"></div>
@@ -165,6 +173,7 @@ const Hero = () => {
         </div>
       </div>
     </section>
+    </>
   );
 };
 
